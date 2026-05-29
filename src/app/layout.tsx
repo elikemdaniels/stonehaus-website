@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,9 +23,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} antialiased flex flex-col min-h-screen text-4xl`}
       >
-        <header>
-          <h1>Stonehaus</h1>
-        </header>
+        <Header />
         <main className="grow">{children}</main>
         <footer>
           <p>&copy; 2026 Stonehaus. All rights reserved.</p>

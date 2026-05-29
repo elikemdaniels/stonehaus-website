@@ -1,5 +1,4 @@
-import Container from "@/components/contaiiner";
-import Section from "@/components/section";
+import { Section, Container } from "@/components";
 import { getArticles } from "@/queries";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ export default async function Home() {
         <ul>
           {articles.map((article) => (
             <li key={article.id}>
-              <Link href={article.url}>{article.title}</Link>
+              <Link href={`/articles/${article.slug}`}>{article.title}</Link>
             </li>
           ))}
         </ul>

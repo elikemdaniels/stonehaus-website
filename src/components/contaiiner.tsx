@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/manageClassNames";
 
 type ContainerProps = React.HTMLAttributes<HTMLElement> & {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ export default function Container({
   ...rest
 }: ContainerProps) {
   return (
-    <div className={cn("bg-amber-100 max-w-5xl mx-auto", className)} {...rest}>
+    <div className={cn("max-w-5xl mx-auto", className)} {...rest}>
       {children}
     </div>
   );

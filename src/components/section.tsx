@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/manageClassNames";
 
 type SectionProps = React.HTMLAttributes<HTMLElement> & {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export default function Section({
   ...rest
 }: SectionProps) {
   return (
-    <Component className={cn("bg-amber-300", className)} {...rest}>
+    <Component className={cn("px-5", className)} {...rest}>
       {children}
     </Component>
   );
