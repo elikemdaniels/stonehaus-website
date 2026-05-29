@@ -25,19 +25,7 @@ export async function getArticles(): Promise<Article[]> {
   const data: any = await client.request(query);
   const articles = data?.entries?.data ?? [];
 
-  // Loop through all articles and localize their featured images
-  const localizedArticles = await Promise.all(
-    articles.map(async (article: any) => {
-      if (article.featured_image?.permalink) {
-        article.featured_image.permalink = await localizeImage(
-          article.featured_image.permalink,
-        );
-      }
-      return article;
-    }),
-  );
-
-  return localizedArticles;
+  return articles;
 }
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
@@ -57,15 +45,6 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   `;
   const data: any = await client.request(query, { slug });
   const article = data?.entry ?? null;
-
-  if (!article) return null;
-
-  // Localize the featured image for this specific article
-  if (article.featured_image?.permalink) {
-    article.featured_image.permalink = await localizeImage(
-      article.featured_image.permalink,
-    );
-  }
 
   return article;
 }

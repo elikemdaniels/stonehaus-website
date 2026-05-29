@@ -3,7 +3,7 @@ export type Article = {
   title: string;
   url: string;
   slug: string;
-  featured_image?: {
+  cover_image?: {
     permalink: string;
   };
 };
