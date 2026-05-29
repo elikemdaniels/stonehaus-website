@@ -1,6 +1,5 @@
 import { gql, GraphQLClient } from "graphql-request";
 import type { Article } from "@/types";
-import { localizeImage } from "@/lib/localizeImage"; // Adjust this path to where your utility lives
 
 const BASE_URL = process.env.STATAMIC_URL; // e.g., http://stonehaus.test
 const client = new GraphQLClient(`${BASE_URL}/graphql`);
