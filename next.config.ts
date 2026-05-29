@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         // Example: If you are running Statamic locally on localhost
         protocol: "http",
         // Get hostname from env
-        hostname: process.env.STATAMIC_URL || "",
+        hostname: "stonehaus-cms.test",
         port: "",
         pathname: "/assets/**", // Restricts optimization strictly to the assets folder
       },
