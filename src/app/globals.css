@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  --color-dark-green: #113a3c;
+  --color-forest-green: #004e41;
+  --color-lemon-green: #dafe80;
+  --color-clementine: #ff5500;
+  --color-vanilla: #f1edde;
+
+  --font-inter: var(--font-inter);
+  --font-bricolage-grotesque: var(--font-bricolage-grotesque);
+}
+
+body {
+  @apply font-inter;
+}
+
+h1 {
+  @apply font-bricolage-grotesque font-extrabold;
+}

@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { inter, bricolage_grotesque } from "./fonts";
 import "./globals.css";
-import { Header } from "@/components";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Header, Hero } from "@/components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased flex flex-col min-h-screen text-4xl`}
+        className={`${bricolage_grotesque.variable} ${inter.variable} antialiased scroll-smooth flex flex-col min-h-screen text-4xl p-4`}
       >
-        <Header />
+        <Hero />
         <main className="grow">{children}</main>
         <footer>
           <p>&copy; 2026 Stonehaus. All rights reserved.</p>

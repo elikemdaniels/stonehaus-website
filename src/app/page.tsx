@@ -1,5 +1,6 @@
 import { Section, Container } from "@/components";
 import { getArticles } from "@/queries";
+// import { roboto_mono, bricolage_grotesque } from "./fonts";
 import Link from "next/link";
 
 export default async function Home() {
