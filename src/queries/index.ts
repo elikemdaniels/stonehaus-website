@@ -46,7 +46,6 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           title
           date(format: "F j, Y")
           slug
-          author
           cover_image {
             permalink
           }
@@ -61,6 +60,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           }
         }
       }
+    }
   `;
   const data: any = await client.request(query, { slug });
   const article = data?.entry ?? null;
