@@ -1,18 +1,14 @@
-import { Section, Container } from "@/components";
+import { Section, Container, StonehausLogo } from "@/components";
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <Section as="header" className="bg-amber-300 p-4">
-      <Container>
-        <h1 className="text-2xl font-bold">Stonehaus Website</h1>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/articles">Articles</a>
-          </li>
-        </ul>
+    <Section as="header" className="py-10">
+      <Container className="max-w-7xl flex items-center justify-between">
+        <Link href="/">
+          <StonehausLogo />
+        </Link>
+        <span>Navigation</span>
       </Container>
     </Section>
   );
