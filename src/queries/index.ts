@@ -12,9 +12,19 @@ export async function getArticles(): Promise<Article[]> {
           ... on Entry_Articles_Article {
             id
             title
+            date(format: "F j, Y")
             slug
             cover_image {
               permalink
+            }
+            author {
+              avatar {
+                permalink
+              }
+              name
+              position {
+                label
+              }
             }
           }
         }
@@ -34,13 +44,23 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
         ... on Entry_Articles_Article {
           id
           title
+          date(format: "F j, Y")
           slug
+          author
           cover_image {
             permalink
           }
+          author {
+            avatar {
+              permalink
+            }
+            name
+            position {
+              label
+            }
+          }
         }
       }
-    }
   `;
   const data: any = await client.request(query, { slug });
   const article = data?.entry ?? null;

@@ -16,12 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolage_grotesque.variable} ${inter.variable} antialiased scroll-smooth flex flex-col min-h-screen`}
+        className={`${bricolage_grotesque.variable} ${inter.variable} antialiased scroll-smooth flex flex-col min-h-screen relative bg-white p-3`}
       >
-        <main className="grow">{children}</main>
-        <footer>
+        <Header />
+
+        <main className="grow flex flex-col gap-3">{children}</main>
+        {/* <footer>
           <p>&copy; 2026 Stonehaus. All rights reserved.</p>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

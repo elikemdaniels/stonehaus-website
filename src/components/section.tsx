@@ -13,7 +13,7 @@ export default function Section({
   ...rest
 }: SectionProps) {
   return (
-    <Component className={cn("px-5", className)} {...rest}>
+    <Component className={cn("px-5 rounded-3xl", className)} {...rest}>
       {children}
     </Component>
   );

@@ -1,9 +1,18 @@
 export type Article = {
   id: string;
   title: string;
-  url: string;
+  date: string;
   slug: string;
   cover_image?: {
-    permalink: string;
+    permalink?: string;
+  };
+  author?: {
+    avatar?: {
+      permalink?: string;
+    };
+    name?: string;
+    position?: {
+      label?: string;
+    };
   };
 };

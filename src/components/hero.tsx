@@ -11,9 +11,8 @@ export default function Hero({
 }) {
   return (
     <>
-      <Section className="bg-dark-green bg-[url('/stonehaus-background.jpg')] bg-cover bg-center px-0 min-h-screen text-white overflow-hidden">
-        <Header />
-        <Container className="text-center max-w-150 grid grid-cols-1 justify-items-center gap-4 mt-[4%]">
+      <Section className="bg-dark-green bg-[url('/stonehaus-background.jpg')] bg-cover bg-center px-0 min-h-[calc(100vh-24px)] text-white overflow-hidden relative">
+        <Container className="text-center max-w-150 grid grid-cols-1 justify-items-center gap-4 mt-[10%]">
           <h1 className="text-[64px] leading-[1.2]">{title}</h1>
           <h2 className="text-[24px] leading-[1.6]">{description}</h2>
           <Link
@@ -23,16 +22,16 @@ export default function Hero({
             Read articles
           </Link>
         </Container>
-        <Container className="fixed bottom-0 left-0 right-0 max-w-7xl flex items-end justify-between">
-          <span>Socials</span>
+        <Container className="absolute bottom-0 left-0 right-0 max-w-6xl flex items-end justify-between">
+          <span className="py-6">Socials</span>
           <Image
             src="/stonehaus-farmer.png"
             alt="Stonehaus Background"
-            width={200}
-            height={200}
-            className="w-115 h-auto"
+            width={800}
+            height={800}
+            className="w-110 h-auto"
           />
-          <span>Socials</span>
+          <span className="py-6">Socials</span>
         </Container>
       </Section>
     </>
