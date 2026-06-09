@@ -1,4 +1,4 @@
-export type Article = {
+export type ArticleProps = {
   id: string;
   title: string;
   date: string;
@@ -15,4 +15,8 @@ export type Article = {
       label?: string;
     };
   };
+};
+
+export type ArticleHeroProps = {
+  title: string;
 };

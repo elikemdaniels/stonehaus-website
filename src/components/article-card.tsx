@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Article } from "@/types";
+import { ArticleProps } from "@/types";
 import Link from "next/link";
 
 export default function ArticleCard({
@@ -8,7 +8,7 @@ export default function ArticleCard({
   author,
   cover_image,
   slug,
-}: Article) {
+}: ArticleProps) {
   return (
     <article className="group">
       <Link

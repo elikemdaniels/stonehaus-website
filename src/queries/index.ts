@@ -1,10 +1,10 @@
 import { gql, GraphQLClient } from "graphql-request";
-import type { Article } from "@/types";
+import type { ArticleProps } from "@/types";
 
 const BASE_URL = process.env.STATAMIC_URL; // e.g., http://stonehaus.test
 const client = new GraphQLClient(`${BASE_URL}/graphql`);
 
-export async function getArticles(): Promise<Article[]> {
+export async function getArticles(): Promise<ArticleProps[]> {
   const query = gql`
     query GET_ARTICLES {
       entries(collection: "articles") {
@@ -37,7 +37,9 @@ export async function getArticles(): Promise<Article[]> {
   return articles;
 }
 
-export async function getArticleBySlug(slug: string): Promise<Article | null> {
+export async function getArticleBySlug(
+  slug: string,
+): Promise<ArticleProps | null> {
   const query = gql`
     query GET_ARTICLE_BY_SLUG($slug: String!) {
       entry(collection: "articles", slug: $slug) {
