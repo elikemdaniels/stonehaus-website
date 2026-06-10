@@ -14,6 +14,7 @@ export async function getArticles(): Promise<ArticleProps[]> {
             title
             date(format: "F j, Y")
             slug
+            content
             cover_image {
               permalink
             }
@@ -48,6 +49,7 @@ export async function getArticleBySlug(
           title
           date(format: "F j, Y")
           slug
+          content
           cover_image {
             permalink
           }

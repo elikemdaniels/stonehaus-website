@@ -15,9 +15,5 @@ export type ArticleProps = {
       label?: string;
     };
   };
-};
-
-export type ArticleHeroProps = {
-  title: string;
-  date: string;
+  content?: string;
 };

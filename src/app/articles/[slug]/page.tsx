@@ -1,4 +1,5 @@
 import { ArticleHero } from "@/components";
+import ArticleContent from "@/components/article-content";
 import { getArticles, getArticleBySlug } from "@/queries";
 
 // Generate Static Params for all articles
@@ -21,5 +22,10 @@ export default async function ArticlePage({
     throw new Error("Article not found");
   }
 
-  return <ArticleHero {...article} />;
+  return (
+    <>
+      <ArticleHero {...article} />
+      <ArticleContent {...article} />
+    </>
+  );
 }
