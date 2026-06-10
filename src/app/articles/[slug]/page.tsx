@@ -21,5 +21,5 @@ export default async function ArticlePage({
     throw new Error("Article not found");
   }
 
-  return <ArticleHero title={article.title} />;
+  return <ArticleHero {...article} />;
 }

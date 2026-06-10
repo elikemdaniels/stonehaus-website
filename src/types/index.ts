@@ -19,4 +19,5 @@ export type ArticleProps = {
 
 export type ArticleHeroProps = {
   title: string;
+  date: string;
 };
