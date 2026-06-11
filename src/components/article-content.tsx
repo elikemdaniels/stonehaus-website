@@ -1,5 +1,4 @@
-import { Section, Container, ArticleCard } from "@/components";
-import { getArticles } from "@/queries";
+import { Section, Container } from "@/components";
 import { ArticleProps } from "@/types";
 
 export default async function ArticleContent({ content }: ArticleProps) {
